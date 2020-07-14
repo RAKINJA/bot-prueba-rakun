@@ -10,7 +10,7 @@ public class BP1 {
 	
 	/* Variables */
 	
-	String prefix = "$";
+	static String prefix = "$";
 	
     public static void main( String[] args ){
     	
@@ -24,7 +24,12 @@ public class BP1 {
     	// Create a simple message
     	api.addMessageCreateListener( event ->{
     		Message msg = event.getMessage();
-    		if(msg.getContent().equalsIgnoreCase("$help")) {
+    		String beginningPrefix = msg.getContent();
+    		if(prefix.compareTo(beginningPrefix)) {
+    			System.out.println(msg.getContent());
+    			/*switch(msg.getContent()){
+    			
+    			}*/
     			event.getChannel().sendMessage("Hola y bienvenido");
     		}
     	});

@@ -42,4 +42,13 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+
+   <distributionManagement>
+      <repository>
+          <id>internal</id>
+          <url>F:\ARCHIVOS\PROYECTOS\Programación\JAVA\Discord-BOT\bot-beta\BotPrueba1\mvn-bot-dply</url>
+      </repository>
+   </distributionManagement>
+
 </project>
